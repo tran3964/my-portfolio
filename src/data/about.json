@@ -1,0 +1,144 @@
+{
+  "bio": "I am currently pursuing a Computer Systems Technology diploma at Saskatchewan Polytechnic, where I specialize in software and mobile development. I have hands-on experience building Android apps with Kotlin and cross-platform apps with Flutter. I am also passionate about video game development, UI/UX design, and managing multiple projects efficiently.",
+  "interests": [
+    "Building creative and interactive software such as games and productivity apps",
+    "Exploring both front-end and back-end technologies",
+    "Continuous learning through self-projects and teamwork"
+  ],
+  "hobbies": [
+    "Jogging",
+    "Swimming",
+    "Listening to audiobooks",
+    "Learning and research new language and culture"
+  ],
+  "skills": {
+    "languages": [
+      {
+        "name": "Java",
+        "icon": "/icons/java.svg",
+        "url": "https://www.java.com"
+      },
+      {
+        "name": "Kotlin",
+        "icon": "/icons/kotlin.svg",
+        "url": "https://kotlinlang.org"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "/icons/javascript.svg",
+        "url": "https://developer.mozilla.org/docs/Web/JavaScript"
+      },
+      {
+        "name": "C#",
+        "icon": "/icons/csharp.svg",
+        "url": "https://learn.microsoft.com/dotnet/csharp/"
+      },
+      {
+        "name": "C++",
+        "icon": "/icons/cpp.svg",
+        "url": "https://isocpp.org"
+      },
+      {
+        "name": "Python",
+        "icon": "/icons/python.svg",
+        "url": "https://www.python.org"
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "React",
+        "icon": "/icons/react.svg",
+        "url": "https://react.dev"
+      },
+      {
+        "name": "Node.js",
+        "icon": "/icons/node.svg",
+        "url": "https://nodejs.org"
+      },
+      {
+        "name": "Flutter",
+        "icon": "/icons/flutter.svg",
+        "url": "https://flutter.dev"
+      }
+    ],
+    "other_tools": [
+      {
+        "name": "Unity",
+        "icon": "/icons/unity.svg"
+      },
+      {
+        "name": "Godot",
+        "icon": "/icons/godot.svg"
+      },
+      {
+        "name": "Blender",
+        "icon": "/icons/blender.svg"
+      },
+      {
+        "name": "Pixel Studio",
+        "icon": "/icons/ps.png"
+      },
+      {
+        "name": "Photoshop",
+        "icon": "/icons/photoshop.svg"
+      },
+      {
+        "name": "Premiere Pro",
+        "icon": "/icons/premiere.svg"
+      },
+      {
+        "name": "After Effects",
+        "icon": "/icons/aftereffects.svg"
+      },
+      {
+        "name": "Illustrator",
+        "icon": "/icons/illustrator.svg"
+      },
+      {
+        "name": "Lightroom",
+        "icon": "/icons/lightroom.svg"
+      },
+      {
+        "name": "Filmora Wondershare",
+        "icon": "/icons/filmora.png"
+      },
+      {
+        "name": "Figma",
+        "icon": "/icons/figma.svg"
+      },
+      {
+        "name": "Notion",
+        "icon": "/icons/notion.svg"
+      }
+    ],
+    "web": [
+      {
+        "name": "HTML",
+        "icon": "/icons/html.svg",
+        "url": "https://developer.mozilla.org/docs/Web/HTML"
+      },
+      {
+        "name": "CSS",
+        "icon": "/icons/css.svg",
+        "url": "https://developer.mozilla.org/docs/Web/CSS"
+      }
+    ],
+    "databases": [
+      {
+        "name": "Firebase",
+        "icon": "/icons/firebase.svg",
+        "url": "https://firebase.google.com"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "/icons/mongodb.svg",
+        "url": "https://www.mongodb.com"
+      },
+      {
+        "name": "SQLite",
+        "icon": "/icons/sqlite.svg",
+        "url": "https://sqlite.org"
+      }
+    ]
+  }
+}

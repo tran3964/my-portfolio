@@ -85,6 +85,7 @@ button:focus-visible {
     color: #08321f;
   }
 }
+
 /* ---------- Animation ---------- */
 
 @keyframes nx-circuit-sweep {
@@ -114,8 +115,10 @@ button:focus-visible {
 /* Typewriter base */
 .typewriter {
   position: relative;
-  white-space: pre-wrap;         /* keep line breaks */
-  overflow-wrap: anywhere;       /* safe wrapping */
+  white-space: pre-wrap;
+  /* keep line breaks */
+  overflow-wrap: anywhere;
+  /* safe wrapping */
 }
 
 /* Blinking caret */
@@ -130,7 +133,9 @@ button:focus-visible {
 }
 
 @keyframes tw-blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* When animation finishes, we can dim/remove the caret if you want */
@@ -140,7 +145,9 @@ button:focus-visible {
 
 /* Respect user's reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
-  .typewriter .tw-caret { display: none !important; }
+  .typewriter .tw-caret {
+    display: none !important;
+  }
 }
 
 /* ---------- Main (spans between header & footer) ---------- */
@@ -417,7 +424,7 @@ hero-header {
   transform: translateY(-30%);
   /* vertically align with the middle of WELCOME */
   margin-left: 0.4rem;
-    /* small spacing gap */
+  /* small spacing gap */
   font-size: .75em;
 }
 
@@ -468,8 +475,8 @@ hero-header {
   position: absolute;
   bottom: 0;
   left: 2%;
-  width: 60vmin;
-  height: 60vmin;
+  width: max(35vmin, 60vmin);
+  height: max(35vmin, 60vmin);
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(0, 255, 136, 0.6);
@@ -577,4 +584,108 @@ hero-header {
   align-items: center;
   color: #9bdcc5;
   font-size: 0.95rem;
+}
+
+
+/* ====== About ====== */
+
+.about-page.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 28px);
+}
+
+.about-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Cards*/
+
+.about-card {
+  background: rgba(0, 0, 0, .35);
+  border: 1px solid rgba(16, 185, 129, .2);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 16px 16px;
+  box-shadow: 0 0 18px rgba(16, 185, 129, .12);
+}
+
+.about-title {
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: #aaffcc;
+}
+
+.about-body p,
+.about-body li {
+  color: #dfeee8;
+}
+
+.icon-strip {
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px dashed rgba(16, 185, 129, .25);
+  padding: 6px 0;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.icon-track {
+  display: flex;
+  gap: 14px;
+  will-change: transform;
+}
+.icon-strip.is-loop { justify-content: flex-start; }
+
+.icon-strip.is-loop .icon-track {
+  animation: strip-marquee var(--speed, 24s) linear infinite;
+}
+.icon-strip.is-loop:hover .icon-track { animation-play-state: paused; }
+
+
+@keyframes strip-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.icon-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .35);
+  border: 1px solid rgba(16, 185, 129, .18);
+  color: #dfffee;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .15s ease;
+}
+
+.icon-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(16,185,129,.45);
+  box-shadow: 0 0 12px rgba(16,185,129,.25);
+}
+.icon-item img {
+  width: 28px; height: 28px; display: block;
+  filter: drop-shadow(0 0 2px rgba(0,255,136,.35));
+}
+.icon-item span { font-size: .95rem; }
+@media (prefers-reduced-motion: reduce) {
+  .icon-strip.is-loop .icon-track { animation: none; }
 }
