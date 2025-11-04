@@ -28,7 +28,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <h2 class="hero-role" data-loop="true" data-speed="26" data-backspeed="40" data-pause="1400">Full-stack software Developer</h2>
+            <h2 class="hero-role" data-ty data-loop="true" data-speed="26" data-backspeed="40" data-pause="1400">Full-stack software Developer</h2>
             <p class="hero-desc" data-ty data-speed="28" data-delay="1200">
               with a strong foundation in Java, Kotlin, JavaScript, and modern
               frameworks. I enjoy building both web and applications for mobile

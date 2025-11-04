@@ -117,42 +117,45 @@ export function attachTypewriter(selector, defaults = {}) {
 function run(el, defaults) {
   const speed     = parseInt(el.dataset.speed || defaults.speed || 24, 10);
   const delay     = parseInt(el.dataset.delay || defaults.delay || 0, 10);
-  const cursorChr = el.dataset.cursor ?? defaults.cursorChar ?? '▌';
+  const cursorChr = (el.dataset.cursor ?? defaults.cursorChar ?? '▌');
 
-  // Preserve inner HTML (tags stay)
+  // Source is the full HTML (not textContent), so we can preserve tags.
   const src = el.innerHTML;
 
-  let i = 0;
+  // We'll build up outputHTML, but only "reveal" visible characters;
+  // tags are appended instantly so they don't get broken.
+  let i = 0;                 // index into src
   let out = '';
   let inTag = false;
 
-  // Start empty
+  // start empty (keeps element height)
   el.innerHTML = '';
 
   const tick = () => {
-    // reveal characters one by one
+    // reveal at least 1 visible character per tick:
     while (i < src.length) {
       const ch = src[i++];
       out += ch;
 
       if (ch === '<') inTag = true;
-      if (ch === '>') inTag = false;
+      if (ch === '>' ) inTag = false;
 
-      // stop only after writing one visible (non-tag) character
-      if (!inTag) break;
+      // only count visible characters when we're not inside a tag
+      if (!inTag) {
+
+        break;
+      }
     }
 
-    // When done typing
     if (i >= src.length) {
-      el.innerHTML = out;
-      return;
+      el.innerHTML = out;      // final HTML (no cursor)
+      return;                  // done
     }
 
-    // Append blinking cursor outside tags
+    // show cursor *outside* tags
     el.innerHTML = out + `<span class="ty-cursor">${cursorChr}</span>`;
     setTimeout(tick, speed);
   };
 
   setTimeout(tick, delay);
 }
-
