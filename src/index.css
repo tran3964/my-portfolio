@@ -733,11 +733,41 @@ hero-header {
 /* ====== Skill & Cert ====== */
 
 /* container + heading (unchanged) */
-.skills-cert {   
-  max-width: 1100px;
+.skills-cert {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: clamp(16px, 3vw, 28px);
+  padding-left: clamp(24px, 4vw, 48px);
+  padding-right: clamp(24px, 4vw, 48px);
+  padding-top: clamp(16px, 3vw, 28px);
+  padding-bottom: clamp(16px, 3vw, 28px);
 }
+
+.skills-academy-row {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr; 
+  gap: 2em;
+  align-items: start;
+}
+@media (max-width:900px){
+  .skills-academy-row{ grid-template-columns:1fr; gap:2em; }
+}
+@media (max-width:500px){
+  .skills-academy-row{ grid-template-columns:1fr; gap:2em; }
+  .card.card--compact .card-body{ max-height:min(32vh, 420px); }
+}
+
+
+.card.card--compact .card-body {
+  max-height: 50vh;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.card.card--compact .card-body::-webkit-scrollbar { height: 8px; width: 8px; }
+.card.card--compact .card-body::-webkit-scrollbar-thumb {
+  background: rgba(16,185,129,.35); border-radius: 999px;
+}
+
 .page-title { font-size: 28px; margin: 8px 0 16px; font-weight: 700; }
 .loading { color: #94a3b8; padding: 12px 0; }
 .error-box { background: #2b1212; color: #fecaca; border: 1px solid #7f1d1d; padding: 12px; border-radius: 8px; }
@@ -841,7 +871,33 @@ hero-header {
 .academy-head { background: rgba(239,241,245,.08); padding: 12px 14px; }
 .academy-name { font-weight: 600; color: #7ef2b7; }
 .academy-prog { color: #a7b9b1; font-size: 13px; }
-
+.academy-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 10px;
+  color: #b9ffd9;
+}
+.academy-controls select {
+  background: rgba(0,0,0,.35);
+  color: #e9fff5;
+  border: 1px solid rgba(16,185,129,.35);
+  border-radius: 8px;
+  padding: 6px 8px;
+}
+/* ---------- Certificaiton section ---------- */
+.certifications-zone{ 
+  display:block; 
+  margin-top:2em;          /* add spacing from the grid row above */
+}
+.certifications-zone .table{
+  table-layout: fixed;
+}
+.certifications-zone th:nth-child(1){ width: 9rem; }   /* Provider  */
+.certifications-zone th:nth-child(3){ width: 9rem; }   /* Issued    */
+.certifications-zone th:nth-child(4){ width:11rem; }   /* Cred ID   */
+.certifications-zone th:nth-child(5){ width: 5rem; }   /* File link */
+.certifications-zone td:nth-child(2){ overflow:hidden; text-overflow:ellipsis; }
 /* ---------- Links ---------- */
 .link { color: #34d399; text-decoration: none; }
 .link:hover { text-decoration: underline; }

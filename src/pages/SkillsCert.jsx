@@ -17,17 +17,22 @@ export default function SkillsCert() {
             <div className="skill-cert">
                 <h2 className="page-title">Skills &amp; Academy</h2>
 
-                <Card title="Skills" ty collapsible defaultOpen>
-                    <SkillTable skills={about.skills || {}} />
-                </Card>
 
-                <Card title="Academy" ty collapsible defaultOpen>
-                    <AcademyTable schools={academy.schools || []} />
-                </Card>
+                <div className="skills-academy-row">
+                    <Card title="Skills" ty collapsible defaultOpen className="card--compact">
+                        <SkillTable skills={about.skills || {}} />
+                    </Card>
 
-                <Card title="Certifications" ty collapsible defaultOpen>
-                    <CertsTable items={certs.items} />
-                </Card>
+                    <Card title="Academy" ty collapsible defaultOpen className="card--compact">
+                        <AcademyTable schools={academy.schools || []} />
+                    </Card>
+                </div>
+
+                <div className="certifications-zone">
+                    <Card title="Certifications" ty collapsible defaultOpen>
+                        <CertsTable items={certs.items} />
+                    </Card>
+                </div>
             </div>
         </Layout>
     )

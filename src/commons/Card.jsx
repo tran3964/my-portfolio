@@ -6,6 +6,7 @@ export default function Card({
   ty = false,
   collapsible = false,
   defaultOpen = true,
+  className = "",          // 🔹 NEW
 }) {
   const [open, setOpen] = useState(defaultOpen);
   const bodyId = useMemo(
@@ -15,25 +16,27 @@ export default function Card({
 
   return (
     <section
-      className={`card${collapsible ? " is-collapsible" : ""}${
-        open ? " is-open" : " is-closed"
-      }`}
+      className={`card${collapsible ? " is-collapsible" : ""}${open ? " is-open" : " is-closed"} ${className}`}
     >
       {title && (
-        <h3 className="card-title" >
+        <h3 className="card-title">
           {collapsible ? (
             <button
               type="button"
               className="card-title-btn"
               aria-expanded={open}
               aria-controls={bodyId}
-              onClick={() => setOpen((o) => !o)}
+              onClick={() => setOpen(o => !o)}
             >
-              <span className="card-title-text" {...(ty ? { "data-ty": true } : {})}>{title}</span>
+              <span className="card-title-text" {...(ty ? { "data-ty": true } : {})}>
+                {title}
+              </span>
               <span className={`chev ${open ? "open" : ""}`} aria-hidden="true" />
             </button>
           ) : (
-            <span className="card-title-text" {...(ty ? { "data-ty": true } : {})}>{title}</span>
+            <span className="card-title-text" {...(ty ? { "data-ty": true } : {})}>
+              {title}
+            </span>
           )}
         </h3>
       )}
