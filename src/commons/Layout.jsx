@@ -1,16 +1,21 @@
-import Navbar from "./Navbar";
+import NavBar from "./Navbar";
 import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="nx-bg-circuit min-h-screen">
-      <div  className="nx-scan" style={{ ['--nx-scan-speed']: '8s' }}>
-        <Navbar />
-        <main className="relative z-10 nx-corner-glow">
+
+    <div className="nx-bg-circuit layout">
+        <header className="site-header">
+          <NavBar />
+        </header>
+
+        <main className="site-main">
           {children}
         </main>
-        <Footer />
-      </div>
+
+        <footer className="site-footer">
+          <Footer />
+        </footer>
     </div>
   );
 }
