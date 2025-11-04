@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <Layout>
-      <Section title="Hello 👋 I’m Nguyen Tran">
+      <Section title="Hello I’m Nguyen Tran">
         <p className="text-zinc-300">
           Full-stack developer with interests in game development and multitasking projects.
         </p>

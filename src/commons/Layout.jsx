@@ -3,12 +3,14 @@ import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen flex flex-col bg-zinc-950 text-zinc-100">
-      <Navbar />
-      <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-10">
-        {children}
-      </main>
-      <Footer />
+    <div className="nx-bg-circuit min-h-screen">
+      <div  className="nx-scan" style={{ ['--nx-scan-speed']: '8s' }}>
+        <Navbar />
+        <main className="relative z-10 nx-corner-glow">
+          {children}
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
