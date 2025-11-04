@@ -11,134 +11,42 @@
     "Listening to audiobooks",
     "Learning and research new language and culture"
   ],
-  "skills": {
+   "skills": {
     "languages": [
-      {
-        "name": "Java",
-        "icon": "/icons/java.svg",
-        "url": "https://www.java.com"
-      },
-      {
-        "name": "Kotlin",
-        "icon": "/icons/kotlin.svg",
-        "url": "https://kotlinlang.org"
-      },
-      {
-        "name": "JavaScript",
-        "icon": "/icons/javascript.svg",
-        "url": "https://developer.mozilla.org/docs/Web/JavaScript"
-      },
-      {
-        "name": "C#",
-        "icon": "/icons/csharp.svg",
-        "url": "https://learn.microsoft.com/dotnet/csharp/"
-      },
-      {
-        "name": "C++",
-        "icon": "/icons/cpp.svg",
-        "url": "https://isocpp.org"
-      },
-      {
-        "name": "Python",
-        "icon": "/icons/python.svg",
-        "url": "https://www.python.org"
-      }
+      { "name": "Java", "icon": "/icons/java.svg", "url": "https://www.java.com", "rating": 4.25 },
+      { "name": "Kotlin", "icon": "/icons/kotlin.svg", "url": "https://kotlinlang.org", "rating": 3.0 },
+      { "name": "JavaScript", "icon": "/icons/javascript.svg", "url": "https://developer.mozilla.org/docs/Web/JavaScript", "rating": 4.0 },
+      { "name": "C#", "icon": "/icons/csharp.svg", "url": "https://learn.microsoft.com/dotnet/csharp/", "rating": 3.25 },
+      { "name": "C++", "icon": "/icons/cpp.svg", "url": "https://isocpp.org", "rating": 4.0 },
+      { "name": "Python", "icon": "/icons/python.svg", "url": "https://www.python.org", "rating": 2.5 }
     ],
     "frameworks": [
-      {
-        "name": "React",
-        "icon": "/icons/react.svg",
-        "url": "https://react.dev"
-      },
-      {
-        "name": "Node.js",
-        "icon": "/icons/node.svg",
-        "url": "https://nodejs.org"
-      },
-      {
-        "name": "Flutter",
-        "icon": "/icons/flutter.svg",
-        "url": "https://flutter.dev"
-      }
-    ],
-    "other_tools": [
-      {
-        "name": "Unity",
-        "icon": "/icons/unity.svg"
-      },
-      {
-        "name": "Godot",
-        "icon": "/icons/godot.svg"
-      },
-      {
-        "name": "Blender",
-        "icon": "/icons/blender.svg"
-      },
-      {
-        "name": "Pixel Studio",
-        "icon": "/icons/ps.png"
-      },
-      {
-        "name": "Photoshop",
-        "icon": "/icons/photoshop.svg"
-      },
-      {
-        "name": "Premiere Pro",
-        "icon": "/icons/premiere.svg"
-      },
-      {
-        "name": "After Effects",
-        "icon": "/icons/aftereffects.svg"
-      },
-      {
-        "name": "Illustrator",
-        "icon": "/icons/illustrator.svg"
-      },
-      {
-        "name": "Lightroom",
-        "icon": "/icons/lightroom.svg"
-      },
-      {
-        "name": "Filmora Wondershare",
-        "icon": "/icons/filmora.png"
-      },
-      {
-        "name": "Figma",
-        "icon": "/icons/figma.svg"
-      },
-      {
-        "name": "Notion",
-        "icon": "/icons/notion.svg"
-      }
+      { "name": "React", "icon": "/icons/react.svg", "url": "https://react.dev", "rating": 1.85 },
+      { "name": "Node.js", "icon": "/icons/node.svg", "url": "https://nodejs.org", "rating": 3.45 },
+      { "name": "Flutter", "icon": "/icons/flutter.svg", "url": "https://flutter.dev", "rating": 1.65 }
     ],
     "web": [
-      {
-        "name": "HTML",
-        "icon": "/icons/html.svg",
-        "url": "https://developer.mozilla.org/docs/Web/HTML"
-      },
-      {
-        "name": "CSS",
-        "icon": "/icons/css.svg",
-        "url": "https://developer.mozilla.org/docs/Web/CSS"
-      }
+      { "name": "HTML", "icon": "/icons/html.svg", "url": "https://developer.mozilla.org/docs/Web/HTML", "rating": 4.0 },
+      { "name": "CSS", "icon": "/icons/css.svg", "url": "https://developer.mozilla.org/docs/Web/CSS", "rating": 3.5 }
     ],
     "databases": [
-      {
-        "name": "Firebase",
-        "icon": "/icons/firebase.svg",
-        "url": "https://firebase.google.com"
-      },
-      {
-        "name": "MongoDB",
-        "icon": "/icons/mongodb.svg",
-        "url": "https://www.mongodb.com"
-      },
-      {
-        "name": "SQLite",
-        "icon": "/icons/sqlite.svg",
-        "url": "https://sqlite.org"
-      }
+      { "name": "Firebase", "icon": "/icons/firebase.svg", "url": "https://firebase.google.com", "rating": 1.25 },
+      { "name": "MongoDB", "icon": "/icons/mongodb.svg", "url": "https://www.mongodb.com", "rating": 1.5 },
+      { "name": "SQLite", "icon": "/icons/sqlite.svg", "url": "https://sqlite.org", "rating": 2.0 }
+    ],
+    "other_tools": [
+      { "name": "Unity", "icon": "/icons/unity.svg", "rating": 1.15 },
+      { "name": "Godot", "icon": "/icons/godot.svg", "rating": 0.75 },
+      { "name": "Blender", "icon": "/icons/blender.svg", "rating": 0.65 },
+      { "name": "Pixel Studio", "icon": "/icons/ps.png", "rating": 0.75 },
+      { "name": "Photoshop", "icon": "/icons/photoshop.svg", "rating": 0.90 },
+      { "name": "Premiere Pro", "icon": "/icons/premiere.svg", "rating": 0.20 },
+      { "name": "After Effects", "icon": "/icons/aftereffects.svg", "rating": 0.25 },
+      { "name": "Illustrator", "icon": "/icons/illustrator.svg", "rating": 0.5 },
+      { "name": "Lightroom", "icon": "/icons/lightroom.svg", "rating": 1.0 },
+      { "name": "Filmora Wondershare", "icon": "/icons/filmora.png", "rating": 1.25 },
+      { "name": "Figma", "icon": "/icons/figma.svg", "rating": 2.5 },
+      { "name": "Notion", "icon": "/icons/notion.svg", "rating": 2.0 }
     ]
   }
 }

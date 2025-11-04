@@ -1,0 +1,7 @@
+{ "items":[
+  {"provider":"Coursera","title":"Algorithms, Part I","issued":"2024-08-10",
+   "credentialId":"ABC-123","description":"Fundamentals…",
+   "file":"/certs/algorithms-part1.pdf","thumb":"/certs/algorithms-part1.png"},
+  {"provider":"Udemy","title":"Complete React Developer","issued":"2024-05-01",
+   "description":"React, hooks, patterns.","file":"/certs/react-developer.png"}
+]}

@@ -1,8 +1,48 @@
-export default function Card({ title, children, ty = false }) {
-    return (
-        <section className="about-card">
-            {title && <h3 className="about-title" {...(ty ? { 'data-ty': true } : {})}>{title}</h3>}
-            <div className="about-body">{children}</div>
-        </section>
-    )
+import { useMemo, useState } from "react";
+
+export default function Card({
+  title,
+  children,
+  ty = false,
+  collapsible = false,
+  defaultOpen = true,
+}) {
+  const [open, setOpen] = useState(defaultOpen);
+  const bodyId = useMemo(
+    () => "card-body-" + Math.random().toString(36).slice(2),
+    []
+  );
+
+  return (
+    <section
+      className={`card${collapsible ? " is-collapsible" : ""}${
+        open ? " is-open" : " is-closed"
+      }`}
+    >
+      {title && (
+        <h3 className="card-title" >
+          {collapsible ? (
+            <button
+              type="button"
+              className="card-title-btn"
+              aria-expanded={open}
+              aria-controls={bodyId}
+              onClick={() => setOpen((o) => !o)}
+            >
+              <span className="card-title-text" {...(ty ? { "data-ty": true } : {})}>{title}</span>
+              <span className={`chev ${open ? "open" : ""}`} aria-hidden="true" />
+            </button>
+          ) : (
+            <span className="card-title-text" {...(ty ? { "data-ty": true } : {})}>{title}</span>
+          )}
+        </h3>
+      )}
+
+      {(!collapsible || open) && (
+        <div id={bodyId} className="card-body">
+          {children}
+        </div>
+      )}
+    </section>
+  );
 }

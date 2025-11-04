@@ -1,0 +1,12 @@
+{ "schools":[
+  {"name":"Saskatchewan Polytechnic","program":"Computer Systems Technology",
+   "courses":[
+    {"code":"CNET-184","title":"Data Communications and Networking","term":"Fall 2024-2025","grade":90},
+    {"code":"CODS-100","title":"Data Automation","term":"Fall 2024-2025","grade":99},
+    {"code":"COOS-181","title":"Operating Systems Fundamentals","term":"Fall 2024-2025","grade":87},
+    {"code":"COSC-180","title":"Introduction to Programming","term":"Fall 2024-2025","grade":82},
+    {"code":"CWEB-180","title":"Web Site Development","term":"Fall 2024-2025","grade":93},
+    {"code":"CWEB-195","title":"UX Fundamentals","term":"Fall 2024-2025","grade":85}
+
+   ]}
+]}

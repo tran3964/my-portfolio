@@ -609,24 +609,67 @@ hero-header {
 
 /* Cards*/
 
-.about-card {
-  background: rgba(0, 0, 0, .35);
-  border: 1px solid rgba(16, 185, 129, .2);
+.card {
+  background: rgba(0, 0, 0, 0.60);
+  border: 1px solid rgba(16, 185, 129, 0.2);
   border-radius: 14px;
   padding: 16px 18px;
-  margin: 16px 16px;
-  box-shadow: 0 0 18px rgba(16, 185, 129, .12);
+  margin: 16px;
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.12);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.about-title {
+.card:hover {
+  box-shadow: 0 0 22px rgba(16, 185, 129, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Title styling */
+.card-title {
   margin: 0 0 10px;
   font-weight: 700;
   color: #aaffcc;
+  font-size: 1.1rem;
 }
 
-.about-body p,
-.about-body li {
+/* Collapsible button inside title */
+.card-title-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+/* Chevron icon for collapsible toggle */
+.chev {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #aaffcc;
+  border-bottom: 2px solid #aaffcc;
+  transform: rotate(45deg);
+  transition: transform 0.15s ease;
+}
+.chev.open {
+  transform: rotate(-135deg);
+}
+
+/* Body content */
+.card-body p,
+.card-body li {
   color: #dfeee8;
+}
+
+/* Glow accent on collapse open/close */
+.card.is-collapsible.is-closed {
+  opacity: 0.85;
 }
 
 .icon-strip {
@@ -686,6 +729,120 @@ hero-header {
   filter: drop-shadow(0 0 2px rgba(0,255,136,.35));
 }
 .icon-item span { font-size: .95rem; }
-@media (prefers-reduced-motion: reduce) {
-  .icon-strip.is-loop .icon-track { animation: none; }
+
+/* ====== Skill & Cert ====== */
+
+/* container + heading (unchanged) */
+.skills-cert {   
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 28px);
 }
+.page-title { font-size: 28px; margin: 8px 0 16px; font-weight: 700; }
+.loading { color: #94a3b8; padding: 12px 0; }
+.error-box { background: #2b1212; color: #fecaca; border: 1px solid #7f1d1d; padding: 12px; border-radius: 8px; }
+/* ---------- Table ---------- */
+.table-wrap { overflow-x: auto; border: 1px solid rgba(16,185,129,.25); border-radius: 12px; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; color: #e9fff5; }
+.table th {
+  background: rgba(239, 241, 245, .08);
+  color: #b7ffe0;
+  text-align: left;
+  padding: 12px 16px;
+}
+.table td { padding: 12px 16px; border-top: 1px solid rgba(16,185,129,.18); }
+.table tr:hover td { background: rgba(16,185,129,.06); }
+.muted { color: #a7b9b1; font-size: 12px; }
+.mono { font-variant-numeric: tabular-nums; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+/* ---------- Horizontal drop-box pills ---------- */
+.hdbox { overflow-x: auto; margin: 8px 0 16px; }
+.hdbox-track { display: inline-flex; gap: 8px; white-space: nowrap; padding-bottom: 2px; }
+.hdbox-pill {
+  border: 1px solid rgba(16,185,129,.35);
+  background: rgba(255,255,255,.06);
+  color: #e9fff5;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(16,185,129,.12) inset;
+}
+.hdbox-pill:hover { background: rgba(16,185,129,.12); }
+.hdbox-pill.is-active {
+  background: #0b1a14;
+  color: #b9ffd9;
+  border-color: rgba(16,185,129,.8);
+  box-shadow: 0 0 10px rgba(16,185,129,.35);
+}
+.hdbox-compact .hdbox-pill { padding: 6px 10px; font-size: 13px; }
+
+
+.skill-cell { display: inline-flex; align-items: center; gap: 10px; }
+.skill-icon {
+  width: 24px; height: 24px;
+  padding: 3px;                 /* badge padding around icon */
+  border-radius: 6px;
+  background: radial-gradient( circle at 40% 40%, rgba(255,255,255,.18), rgba(255,255,255,.06) );
+  border: 1px solid rgba(180,255,220,.18);
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.5), 0 0 8px rgba(16,185,129,.12);
+  filter: brightness(1.05) contrast(1.05) drop-shadow(0 0 2px rgba(170,255,204,.35));
+}
+/* If an icon is pure black and still hard to see, add className="skill-icon invert" to that <img> */
+.skill-icon.invert { filter: invert(1) brightness(1.2) contrast(1.1); }
+
+.skill-link { color: #34d399; text-decoration: none; }
+.skill-link:hover { text-decoration: underline; }
+
+/* ---------- StBarsars (0.1 precision) ---------- */
+.rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;         /* keeps a consistent look in the table */
+}
+.rate-track {
+  position: relative;
+  width: 140px;             /* 5 stars * 28px equivalent */
+  height: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(16,185,129,0.35);
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 0 8px rgba(0,0,0,.6), 0 0 8px rgba(16,185,129,.12);
+}
+.rate-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(16,185,129,.35);
+  transition: width .35s ease;   /* smooth fill */
+}
+.rate-label {
+  color: #a8b5af;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Optional: a subtle striped sheen on the fill (comment out if you want flat) */
+.rate-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,.18) 0 8px, transparent 8px 16px);
+  background-size: 16px 16px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* ---------- Academy section ---------- */
+.academy { display: grid; gap: 16px; }
+.academy-box { border: 1px solid rgba(16,185,129,.25); border-radius: 12px; overflow: hidden; }
+.academy-head { background: rgba(239,241,245,.08); padding: 12px 14px; }
+.academy-name { font-weight: 600; color: #7ef2b7; }
+.academy-prog { color: #a7b9b1; font-size: 13px; }
+
+/* ---------- Links ---------- */
+.link { color: #34d399; text-decoration: none; }
+.link:hover { text-decoration: underline; }
+.cert-title { font-weight: 500; }
