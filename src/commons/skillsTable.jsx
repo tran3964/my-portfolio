@@ -58,7 +58,7 @@ const visible = (list || []).filter(s => (s.rating ?? 0) > VISIBLE_MIN);
             <tr key={s.name}>
               <td>
                 <div className="skill-cell">
-                  {s.icon && <img src={s.icon} alt="" className="skill-icon" />}
+                  {s.icon && <img src={asset(it.icon)} alt="" className="skill-icon" />}
                   {s.url ? (
                     <a href={s.url} target="_blank" rel="noreferrer" className="skill-link">
                       {s.name}
