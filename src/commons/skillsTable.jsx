@@ -1,5 +1,6 @@
 // src/commons/skillsTable.jsx
 import React, { useMemo, useState } from "react";
+import asset from '../utils/asset';
 import HorizontalDropBox from "./horizontal-drop-box";
 
 export default function SkillsTable({ skills, about, initial = "languages" }) {
