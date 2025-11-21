@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import avatar from "../assets/528020337_2525214064537831_6149755178532786936_n.jpg"; // put your image here
 import Layout from "../commons/Layout";
+import asset from "../utils/asset";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function Home() {
                 <p class="intro-top" data-ty data-speed="30" data-delay="300">
                   to my <span class="highlight">DIGITAL PORTFOLIO</span>
                 </p>
-                <p class="intro-name"  data-ty data-delay="900" data-speed="24" data-cursor="|">
+                <p class="intro-name" data-ty data-delay="900" data-speed="24" data-cursor="|">
                   I am <span class="highlight-name">NGUYEN TRAN</span>
                 </p>
               </div>
@@ -37,21 +38,52 @@ export default function Home() {
             </p>
 
             <div className="hero-cta">
-              <button
-                type="button"
-                className="cta cta-primary"
-                onClick={() => navigate("/about")}
-              >
-                Go to About Me
-              </button>
+              <div className="cta-left">
+                <button
+                  type="button"
+                  className="cta cta-primary"
+                  onClick={() => navigate("/about")}
+                >
+                  Go to About Me
+                </button>
 
-              <button
-                type="button"
-                className="cta cta-ghost"
-                onClick={() => navigate("/contact")}
-              >
-                Contact
-              </button>
+                <button
+                  type="button"
+                  className="cta cta-ghost"
+                  onClick={() => navigate("/projects")}
+                >
+                  Projects
+                </button>
+              </div>
+
+              <div className="cta-right">
+                <a
+                  href="mailto:tranchaugianguyen.201204@gmail.com"
+                  className="cta-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={asset("icons/gmail.svg")} alt="gmail" />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/nguyen-tran-a4b693327/"
+                  className="cta-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={asset("icons/linkedIn.svg")} alt="linkedin" />
+                </a>
+
+                <a
+                  href="https://github.com/tran3964"
+                  className="cta-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={asset("icons/github.svg")} alt="github" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

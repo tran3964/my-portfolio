@@ -6,7 +6,16 @@
     {"code":"COOS-181","title":"Operating Systems Fundamentals","term":"Fall 2024-2025","grade":87},
     {"code":"COSC-180","title":"Introduction to Programming","term":"Fall 2024-2025","grade":82},
     {"code":"CWEB-180","title":"Web Site Development","term":"Fall 2024-2025","grade":93},
-    {"code":"CWEB-195","title":"UX Fundamentals","term":"Fall 2024-2025","grade":85}
-
+    {"code":"CWEB-195","title":"UX Fundamentals","term":"Fall 2024-2025","grade":85},
+    {"code":"CDBM-190","title":"Introduction to Database Management","term":"Winter 2024-2025","grade":98},
+    {"code":"COHS-190","title":"Hardware","term":"Winter 2024-2025","grade":77},
+    {"code":"COOS-190","title":"Server Administration","term":"Winter 2024-2025","grade":72},
+    {"code":"COSA-190","title":"Systems Analysis and Design","term":"Winter 2024-2025","grade":76},
+    {"code":"COSC-182","title":"Intermediate Programming 1","term":"Winter 2024-2025","grade":89},
+    {"code":"CWEB-190","title":"Internet Programming/Web Applications 1","term":"Winter 2024-2025","grade":97},
+    {"code":"TCOM-190","title":"Technical Communications","term":"Winter 2024-2025","grade":62},
+    {"code":"COSA-195","title":"Systems Project","term":"Spring 2024-2025","grade":93},
+    {"code":"COSC-183","title":"Intermediate Programming 2","term":"Spring 2024-2025","grade":91},
+    {"code":"COSC-195","title":"Mobile Application Programming","term":"Spring 2024-2025","grade":91}
    ]}
 ]}

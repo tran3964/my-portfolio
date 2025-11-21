@@ -28,11 +28,11 @@ export default function SkillsCert() {
                     </Card>
                 </div>
 
-                <div className="certifications-zone">
+                {/* <div className="certifications-zone">
                     <Card title="Certifications" ty collapsible defaultOpen>
                         <CertsTable items={certs.items} />
                     </Card>
-                </div>
+                </div> */}
             </div>
         </Layout>
     )

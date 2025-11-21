@@ -1,0 +1,84 @@
+[
+  {
+    "id": "ioz-intern",
+    "title": "Intern – Front-end Developer",
+    "team": "IOZ DEV TEAM",
+    "location": "Remote",
+    "period": "June 2025 – Present",
+    "status": "ongoing",
+    "summary": [
+      "Collaborated on two Android projects: an attendance checking app and an alcohol testing app using a Bluetooth breathalyzer.",
+      "Developed and maintained front-end features using Kotlin in Android Studio to build responsive, user-friendly interfaces.",
+      "Joined weekly meetings to test, debug, and confirm changes before release."
+    ],
+    "slides": [
+      {
+        "image": "image/ioz-dashboard.png",
+        "title": "Device Dashboard",
+        "text": "Implemented responsive layout for device status, test history, and quick actions, focusing on clarity for field operators."
+      },
+      {
+        "image": "image/ioz-flow.png",
+        "title": "Testing Workflow",
+        "text": "Helped refine the step-by-step testing flow so users can complete a breathalyzer test with minimal confusion."
+      }
+    ]
+  },
+
+  {
+    "id": "lab-app",
+    "title": "Laboratory Appointment Booking App",
+    "team": "Computer Systems Technology Program",
+    "location": "Academic Project",
+    "period": "Jan 2025 – Present",
+    "status": "ongoing",
+    "summary": [
+      "Built a cross-platform mobile app in Flutter with Firebase as the backend.",
+      "Implemented appointment scheduling, patient data storage, and secure authentication.",
+      "Worked in a team following the full SDLC: requirements, design, implementation, and testing."
+    ],
+    "slides": [
+      {
+        "image": "image/lab-login.png",
+        "title": "Login & Authentication",
+        "text": "Designed a simple Firebase-based login screen so patients can safely access their appointment data."
+      },
+      {
+        "image": "image/lab-booking.png",
+        "title": "Booking Screen",
+        "text": "Created the booking interface with date/time picker, validation, and feedback for successful bookings."
+      },
+      {
+        "image": "image/lab-history.png",
+        "title": "Appointment History",
+        "text": "Displays upcoming and completed appointments pulled from Firestore, similar to real healthcare apps."
+      }
+    ]
+  },
+
+  {
+    "id": "wordy",
+    "title": "Mobile App Developer (Project: WORDY)",
+    "team": "Independent Project",
+    "location": "Self-Directed",
+    "period": "April – June 2025",
+    "status": "completed",
+    "summary": [
+      "Designed and built a word guessing game app in Android Studio using Kotlin.",
+      "Implemented custom UI components, level-based gameplay, and SQLite for saving player progress.",
+      "Optimized performance and refined UX, managing the full app development lifecycle from prototype to release."
+    ],
+    "slides": [
+      {
+        "image": "image/wordy-home.png",
+        "title": "Home & Mode Selection",
+        "text": "Players can choose between Level mode and Time Race, each with its own UI and difficulty progression."
+      },
+      {
+        "image": "image/wordy-gameplay.png",
+        "title": "Gameplay Screen",
+        "text": "Letter grid, hints, and animations are all custom-built; the layout adapts for long words and idioms."
+      }
+    ]
+  }
+]
