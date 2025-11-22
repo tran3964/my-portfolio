@@ -9,7 +9,7 @@ export default function NavBar() {
     { label: "About", to: "/about" },
     { label: "Projects", to: "/projects" },
     { label: "Skills & Academy", to: "/skills" },
-    { label: "Contact", to: "/contact" },
+//    { label: "Contact", to: "/contact" },
   ];
 
   return (

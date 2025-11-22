@@ -1,66 +1,77 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import asset from "../utils/asset";
 
 export default function ProjectGallery({ slides = [] }) {
-    const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
+  const hasMany = slides.length > 1;
 
-    if (!slides.length) return null;
+  useEffect(() => {
+    if (!hasMany) return;
 
-    const current = slides[index];
-    const hasMany = slides.length > 1;
+    const timer = setTimeout(() => {
+      goNext();
+    }, 15000);
 
-    const goPrev = () => {
-        setIndex((i) => (i - 1 + slides.length) % slides.length);
-    };
+    return () => clearTimeout(timer);
+  }, [index, slides.length, hasMany]);
 
-    const goNext = () => {
-        setIndex((i) => (i + 1) % slides.length);
-    };
+  
+  if (!slides.length) return null;
 
-    return (
-        <div className="proj-gallery">
-            {hasMany && (
-                <button
-                    type="button"
-                    className="proj-nav proj-nav--prev"
-                    onClick={goPrev}
-                    aria-label="Previous slide"
-                >
-                    ‹
-                </button>
-            )}
+  const current = slides[index];
+  
+  const goPrev = () => {
+    setIndex((i) => (i - 1 + slides.length) % slides.length);
+  };
 
-            <div className="proj-gallery-image">
-                <img
-                    src={asset(current.image)}
-                    alt={current.title || "Project screenshot"}
-                />
-            </div>
+  const goNext = () => {
+    setIndex((i) => (i + 1) % slides.length);
+  };
 
-            <div className="proj-gallery-text">
-                {current.title && <h4 className="proj-slide-title">{current.title}</h4>}
-                {/* Typewriter for the slide text */}
-                <p data-ty className="proj-slide-text">
-                    {current.text}
-                </p>
+  return (
+    <div className="proj-gallery">
+      {hasMany && (
+        <button
+          type="button"
+          className="proj-nav proj-nav--prev"
+          onClick={goPrev}
+          aria-label="Previous slide"
+        >
+          ‹
+        </button>
+      )}
 
-                {hasMany && (
-                    <p className="proj-gallery-counter">
-                        {index + 1} / {slides.length}
-                    </p>
-                )}
-            </div>
+      <div className="proj-gallery-image">
+        <img
+          src={asset(current.image)}
+          alt={current.title || "Project screenshot"}
+        />
+      </div>
 
-            {hasMany && (
-                <button
-                    type="button"
-                    className="proj-nav proj-nav--next"
-                    onClick={goNext}
-                    aria-label="Next slide"
-                >
-                    ›
-                </button>
-            )}
-        </div>
-    );
+      <div className="proj-gallery-text">
+        {current.title && <h4 className="proj-slide-title">{current.title}</h4>}
+        {/* Typewriter for the slide text */}
+        <p data-ty className="proj-slide-text">
+          {current.text}
+        </p>
+
+        {hasMany && (
+          <p className="proj-gallery-counter">
+            {index + 1} / {slides.length}
+          </p>
+        )}
+      </div>
+
+      {hasMany && (
+        <button
+          type="button"
+          className="proj-nav proj-nav--next"
+          onClick={goNext}
+          aria-label="Next slide"
+        >
+          ›
+        </button>
+      )}
+    </div>
+  );
 }

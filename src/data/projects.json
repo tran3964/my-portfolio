@@ -7,20 +7,25 @@
     "period": "June 2025 – Present",
     "status": "ongoing",
     "summary": [
-      "Collaborated on two Android projects: an attendance checking app and an alcohol testing app using a Bluetooth breathalyzer.",
-      "Developed and maintained front-end features using Kotlin in Android Studio to build responsive, user-friendly interfaces.",
-      "Joined weekly meetings to test, debug, and confirm changes before release."
+      "Collaborating with IOZ to modernize and refine the front-end of two management web applications.",
+      "Contributing to the attendance-tracking system used for staff workflow oversight.",
+      "Enhancing the platform responsible for connecting and managing alcohol breath-testing devices deployed in Japan."
     ],
     "slides": [
       {
-        "image": "image/ioz-dashboard.png",
-        "title": "Device Dashboard",
-        "text": "Implemented responsive layout for device status, test history, and quick actions, focusing on clarity for field operators."
+        "image": "image/FaceIndexWRC_DepartmentPage.png",
+        "title": "Face-Index WRC Platform",
+        "text": "The first project I contributed to at IOZ was the FaceIndex WRC platform, where I was responsible for maintaining and improving two core management pages: Department and Tenant. My work focused on refining UI behavior, fixing inconsistent data mappings, and ensuring a smoother experience for administrators interacting with large datasets."
       },
       {
-        "image": "image/ioz-flow.png",
-        "title": "Testing Workflow",
-        "text": "Helped refine the step-by-step testing flow so users can complete a breathalyzer test with minimal confusion."
+        "image": "image/FaceIndexWRC_TenantPage.png",
+        "title": "Face-Index WRC Platform",
+        "text": "This project was also my first practical experience using React, and it significantly shaped how I work as a front-end developer. I learned how to collaborate remotely with a team, follow professional GitHub workflows, and structure commits in a clean, industry-standard format. I was also trained to implement proper testing practices—such as validating the Search Bar and filter logic—to ensure that new features were stable, predictable, and aligned with real user needs."
+      },
+      {
+        "image": "image/FaceIndexALC_Tenant.png",
+        "title": "Face-Index ALC Platform",
+        "text": "The second project I supported was FaceIndex for ALC2, which expanded on the experience I gained from the WRC system. While many tasks were similar—such as maintaining the Tenant page and ensuring accurate data filtering—this project required working with more advanced UI components and deeper configuration settings. It allowed me to explore the platform’s internal structure at a greater level and handle more complex front-end logic."
       }
     ]
   },
@@ -33,25 +38,61 @@
     "period": "Jan 2025 – Present",
     "status": "ongoing",
     "summary": [
-      "Built a cross-platform mobile app in Flutter with Firebase as the backend.",
-      "Implemented appointment scheduling, patient data storage, and secure authentication.",
-      "Worked in a team following the full SDLC: requirements, design, implementation, and testing."
+      "Developing a mobile booking system that follows an Uber-style workflow, where patients request blood test appointments through the app.",
+      "Designed the user-facing interface that allows patients to schedule appointments, while healthcare staff receive and manage the requests.",
+      "Collaborating in a team environment to build a smooth and reliable appointment process, focusing on UI clarity and real-world healthcare scenarios."
     ],
     "slides": [
       {
-        "image": "image/lab-login.png",
-        "title": "Login & Authentication",
-        "text": "Designed a simple Firebase-based login screen so patients can safely access their appointment data."
+        "image": "image/MobileLab_Login.png",
+        "title": "Technology & Languages used",
+        "text": "Built the login and user-access flow using Flutter for the UI, Node.js for backend management, and Firebase for authentication and data storage. Our team also plans to integrate a live tracking map to help patients and nurses coordinate safely during appointment visits."
       },
       {
-        "image": "image/lab-booking.png",
-        "title": "Booking Screen",
-        "text": "Created the booking interface with date/time picker, validation, and feedback for successful bookings."
+        "image": "image/MobileLab_Home.png",
+        "title": "",
+        "text": ""
+      }
+      ,
+      {
+        "image": "image/MobileLab_UpcomingAppointment.png",
+        "title": "",
+        "text": ""
       },
       {
-        "image": "image/lab-history.png",
-        "title": "Appointment History",
-        "text": "Displays upcoming and completed appointments pulled from Firestore, similar to real healthcare apps."
+        "image": "image/MobileLab_CreateAppointment.png",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/MobileLab_ChooseTypeOfAppointment.png",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/MobileLab_BookAppointment.png",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/MobileLab_ChooseBloodTest.png",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/MobileLab_AppointmentReview.png",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/MobileLab_Settings.png",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/MobileLab_FeedBack.png",
+        "title": "",
+        "text": ""
       }
     ]
   },
@@ -64,20 +105,40 @@
     "period": "April – June 2025",
     "status": "completed",
     "summary": [
-      "Designed and built a word guessing game app in Android Studio using Kotlin.",
-      "Implemented custom UI components, level-based gameplay, and SQLite for saving player progress.",
-      "Optimized performance and refined UX, managing the full app development lifecycle from prototype to release."
+      "Created WORDY as an educational English-learning app that helps users expand vocabulary through hint-based word guessing.",
+      "Designed two game modes—Level Mode and Time Race—featuring structured difficulty, custom UI components, and an adaptive layout for long words and idioms.",
+      "Implemented a full progression system using Kotlin and SQLite, handling data saving, animations, and user experience refinement from prototype to final release."
     ],
     "slides": [
       {
-        "image": "image/wordy-home.png",
-        "title": "Home & Mode Selection",
-        "text": "Players can choose between Level mode and Time Race, each with its own UI and difficulty progression."
+        "image": "image/Wordy_Entrance.jpg",
+        "title": "Technology & Languages used",
+        "text": "The app was developed in Android Studio using Kotlin as the primary programming language. All vocabulary content, level data, and hint sets were stored and managed through structured JSON files, allowing flexible updates, multilingual expansion, and lightweight data handling without requiring a backend server."
       },
       {
-        "image": "image/wordy-gameplay.png",
-        "title": "Gameplay Screen",
-        "text": "Letter grid, hints, and animations are all custom-built; the layout adapts for long words and idioms."
+        "image": "image/Wordy_Home.jpg",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/Wordy_Account.jpg",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/Wordy_Setting.jpg",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/Wordy_SelectionLevel.jpg",
+        "title": "",
+        "text": ""
+      },
+      {
+        "image": "image/Wordy_LevelGamePlay.jpg",
+        "title": "",
+        "text": ""
       }
     ]
   }
