@@ -9,7 +9,8 @@
     "summary": [
       "Collaborating with IOZ to modernize and refine the front-end of two management web applications.",
       "Contributing to the attendance-tracking system used for staff workflow oversight.",
-      "Enhancing the platform responsible for connecting and managing alcohol breath-testing devices deployed in Japan."
+      "Enhancing the platform responsible for connecting and managing alcohol breath-testing devices deployed in Japan.",
+      "Technologies Used: React, JavaScript (ES6+), MUI, REST APIs, GitHub, Agile workflow"
     ],
     "slides": [
       {
@@ -57,12 +58,12 @@
       {
         "image": "image/MobileLab_UpcomingAppointment.png",
         "title": "",
-        "text": ""
+        "text": "My responsibilities included designing core interfaces such as the login flow, booking form, and basic data display pages. A major challenge I solved was implementing data validation and UI responsiveness across multiple devices. I also prepared the foundation for adding a live map-tracking feature for safer coordination between patients and nurses."
       },
       {
         "image": "image/MobileLab_CreateAppointment.png",
         "title": "",
-        "text": ""
+        "text": "This artifact reflects my ability to build scalable UI components, integrate cloud services, and participate in a structured team development environment. It showcases strong problem-solving skills and the ability to apply mobile UI/UX principles to real-world workflows."
       },
       {
         "image": "image/MobileLab_ChooseTypeOfAppointment.png",
@@ -118,12 +119,12 @@
       {
         "image": "image/Wordy_Home.jpg",
         "title": "",
-        "text": ""
+        "text": "As the sole developer, I designed the game mechanics, built the UI, implemented JSON data parsing, and managed all game logic. A challenge I overcame was designing a flexible data structure for levels and hints, allowing the game to scale to hundreds of vocabulary entries without needing a backend."
       },
       {
         "image": "image/Wordy_Account.jpg",
         "title": "",
-        "text": ""
+        "text": "This project highlights my creativity, my ability to design complete applications independently, and my skill in transforming language-learning ideas into a functional mobile experience. It demonstrates self-direction, technical fluency in Kotlin, and the ability to deliver a polished user experience."
       },
       {
         "image": "image/Wordy_Setting.jpg",

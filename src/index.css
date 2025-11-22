@@ -1100,3 +1100,63 @@ hero-header {
     order: 1;
   }
 }
+/* ====== Contact Page =======*/
+/* Parent layout */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Left Image (Avatar) */
+.contact-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-avatar img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(0, 255, 153, 0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.3);
+}
+
+/* Icons on right */
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-icons img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 8px;
+  background: rgba(0, 255, 153, 0.08);
+  box-shadow: 0 0 12px rgba(0, 255, 153, 0.2);
+  transition: 0.2s ease;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.6);
+}
+
+/* Mobile responsive */
+@media (max-width: 720px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

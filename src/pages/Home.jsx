@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import avatar from "../assets/528020337_2525214064537831_6149755178532786936_n.jpg"; // put your image here
 import Layout from "../commons/Layout";
-import asset from "../utils/asset";
+//import asset from "../utils/asset";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -50,13 +50,13 @@ export default function Home() {
                 <button
                   type="button"
                   className="cta cta-ghost"
-                  onClick={() => navigate("/projects")}
+                  onClick={() => navigate("/contact")}
                 >
-                  Projects
+                  Contact me...
                 </button>
               </div>
 
-              <div className="cta-right">
+              {/* <div className="cta-right">
                 <a
                   href="mailto:tranchaugianguyen.201204@gmail.com"
                   className="cta-link"
@@ -83,7 +83,7 @@ export default function Home() {
                 >
                   <img src={asset("icons/github.svg")} alt="github" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
